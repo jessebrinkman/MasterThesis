@@ -1,0 +1,1854 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/jesse/ontologies/2018/10/Version3#"
+     xml:base="http://www.semanticweb.org/jesse/ontologies/2018/10/Version3"
+     xmlns:Version4="http://www.semanticweb.org/jesse/ontologies/2018/10/Version4#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology">
+        <rdfs:comment>GenericOntology</rdfs:comment>
+        <rdfs:comment>BMC and MAIA - Combining the Classes of BMC and MAIA</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#hasActionBody -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#hasActionBody">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#EntityAction"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#ActionBody"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#hasActivityLevel -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#hasActivityLevel">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Activity"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#PrimaryActivity"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#SupportActivity"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#hasAffordance -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#hasAffordance">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#PhysicalComponent"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Affordance"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#hasAgent -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#hasAgent">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#RoleEnactment"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#AgentType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#hasAim -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#hasAim">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Institution"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Aim"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#hasAspect -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#hasAspect">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#DecisionMakingCriterium"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Aspect"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#hasAspectType -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#hasAspectType">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Aspect"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Institution"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#PersonalValue"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Property"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Variable"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:comment>in MAIA an AspectType refers to Prop or PersVal or Inst or LV or Lp, where LV is variables and lp is propositional formula</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#hasAttribute -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#hasAttribute">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Institution"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Attribute"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#hasBeginNode -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#hasBeginNode">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#PhysicalConnection"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#BeginNode"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#hasBehaviour -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#hasBehaviour">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#PhysicalComponent"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Behaviour"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#hasBusinessModel -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#hasBusinessModel">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Firm"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#BMC"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#hasCharacteristic -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#hasCharacteristic">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#TargetCustomer"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Attribute"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Role"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#hasChildComposition -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#hasChildComposition">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#PhysicalComposition"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#ChildComposition"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#hasCondition -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#hasCondition">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#DecisionMakingCriterium"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Institution"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Condition"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#hasCustomerEquity -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#hasCustomerEquity">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Mechanism"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#CustomerEquity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#hasDecisionMakingCriterium -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#hasDecisionMakingCriterium">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#AgentType"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#EntityAction"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#DecisionMakingCriterium"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#hasDeontic -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#hasDeontic">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Norm"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Rule"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Deontic"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#hasDependee -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#hasDependee">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Dependency"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#AgentType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#hasDependentVariable -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#hasDependentVariable">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#ProblemDomainVariable"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#ValidationVariable"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Variable"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#hasDepender -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#hasDepender">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Dependency"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#AgentType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#hasEndNode -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#hasEndNode">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#PhysicalConnection"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#EndNode"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#hasEntityAction -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#hasEntityAction">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#ProblemDomainVariable"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#RoleEnactment"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#EntityAction"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#hasEntryCondition -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#hasEntryCondition">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Role"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#EntryCondition"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#hasFunction -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#hasFunction">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Mechanism"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Function"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#hasGain -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#hasGain">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#AgentType"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Gain"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#hasIndependentVariable -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#hasIndependentVariable">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#ProblemDomainVariable"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#ValidationVariable"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Variable"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#hasInformation -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#hasInformation">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#AgentType"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Information"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#hasInstitution -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#hasInstitution">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#ActionSituation"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Role"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Institution"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#hasInstitutionalResponsibility -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#hasInstitutionalResponsibility">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Role"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#InstitutionalResponsibility"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#hasIntrinsicCapability -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#hasIntrinsicCapability">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#AgentType"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#IntrinsicCapability"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#hasJobsToBeDone -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#hasJobsToBeDone">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#AgentType"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#JobsToBeDone"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#hasMeetingCondition -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#hasMeetingCondition">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Objective"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#MeetingCondition"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#hasObjective -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#hasObjective">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Role"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Objective"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#hasOffering -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#hasOffering">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Firm"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Offering"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#hasOrElse -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#hasOrElse">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Rule"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#OrElse"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#hasPain -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#hasPain">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#AgentType"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Pain"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#hasParentComposition -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#hasParentComposition">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#PhysicalComposition"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#ParentComposition"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#hasPerformer -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#hasPerformer">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#EntityAction"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#AgentType"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#PhysicalComponent"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Role"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#hasPersonalValue -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#hasPersonalValue">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#AgentType"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#PersonalValue"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#hasPhysicalComponent -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#hasPhysicalComponent">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#AgentType"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#PhysicalComponent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#hasPlan -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#hasPlan">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#ActionSituation"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Plan"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#hasPosition -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#hasPosition">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#PhysicalComponent"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Position"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#hasPostCondition -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#hasPostCondition">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#EntityAction"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#PostCondition"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#hasPostConditionNotDo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#hasPostConditionNotDo">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#EntityAction"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#PostCondition"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#hasPreCondition -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#hasPreCondition">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#EntityAction"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#PreCondition"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#hasProperty -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#hasProperty">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#AgentType"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#PhysicalComponent"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#PhysicalConnection"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Property"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#hasReasoning -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#hasReasoning">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Agreement"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Offering"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Reasoning"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#hasRelatedAction -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#hasRelatedAction">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#ProblemDomainVariable"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#ValidationVariable"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#EntityAction"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#hasRelationType -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#hasRelationType">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#ProblemDomainVariable"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#ValidationVariable"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#RelationType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#hasRole -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#hasRole">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#AgentType"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#RoleEnactment"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Role"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#hasRoleEnactment -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#hasRoleEnactment">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#EntityAction"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#RoleEnactment"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#hasType -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#hasType">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#PhysicalComponent"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Type"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#hasValueUpdate -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#hasValueUpdate">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#ProblemDomainVariable"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#ValidationVariable"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#ValueUpdate"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#hasCardinality -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#hasCardinality">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#PhysicalComposition"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#ValueProposition"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#real"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#hasDegreeofCompetition -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#hasDegreeofCompetition">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Agreement"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#hasDegreeofIntegration -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#hasDegreeofIntegration">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Agreement"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#hasDescription -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#hasDescription">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Offering"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#TargetCustomer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Human understandable explanation</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#hasLimit -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#hasLimit">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#PersonalValue"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#real"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#hasName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#hasName">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#AgentType"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#DecisionMakingCriterium"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Offering"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Property"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Variable"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#hasObjectiveDistance -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#hasObjectiveDistance">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Objective"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#real"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#hasPrice -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#hasPrice">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#ActiveService"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#PassiveService"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Product"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#real"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#hasStrategicImportance -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#hasStrategicImportance">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Agreement"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#hasSubstitutability -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#hasSubstitutability">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Agreement"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#hasThreshold -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#hasThreshold">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#DecisionMakingCriterium"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#real"/>
+        <rdfs:comment>&quot;Value to compare the sum of aspects against&quot; (Ghorbani, 2013)</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#hasUnit -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#hasUnit">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Property"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Variable"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#hasValue -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#hasValue">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Property"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Variable"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#real"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#hasWeight -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#hasWeight">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Aspect"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Acquisition -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Acquisition">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#CustomerEquity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#ActionBody -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#ActionBody">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Other"/>
+        <rdfs:comment>Lexicon for action bodies</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#ActionSituation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#ActionSituation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#OperationalStructure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#ActiveService -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#ActiveService">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#ServiceBasedOffering"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Activity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Activity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#InfrastructureManagement"/>
+        <rdfs:comment>EntityAction in MAIA</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#ActivityLevel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#ActivityLevel">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#PrimaryActivity"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#SupportActivity"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Other"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#AddOnSelling -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#AddOnSelling">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#CustomerEquity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Affordance -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Affordance">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#ActionBody"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#AgentType -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#AgentType">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#CollectiveStructure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Agreement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Agreement">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Partner"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Rule"/>
+        <rdfs:comment>From Business Model Canvas. Can also be called Contract</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Aim -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Aim">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Other"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Aspect -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Aspect">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Other"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Atomic -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Atomic">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Plan"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Attribute -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Attribute">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Other"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#BMC -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#BMC">
+        <rdfs:comment>Business Model Canvas, from Osterwalder (2004), adapted for the use of this research</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#BeginNode -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#BeginNode">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#PhysicalComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Behaviour -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Behaviour">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#ActionBody"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Brand -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Brand">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Function"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Cardinality -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Cardinality">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Other"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#ChildComposition -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#ChildComposition">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#PhysicalComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Choice -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Choice">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Plan"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#CollectiveStructure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#CollectiveStructure">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#MAIA"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Condition -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Condition">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#PropositionalFormula"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#ConstitutionalStructure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#ConstitutionalStructure">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#MAIA"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#CustomerEquity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#CustomerEquity">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Acquisition"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#AddOnSelling"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Retention"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Other"/>
+        <rdfs:comment>Goal towards TargetCustomer</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#CustomerInterface -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#CustomerInterface">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#BMC"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#DecisionMakingCriterium -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#DecisionMakingCriterium">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Other"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Deontic -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Deontic">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Obligation"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Permission"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Prohibition"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Other"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Dependency -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Dependency">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#ConstitutionalStructure"/>
+        <rdfs:comment>Set of Dependencies between Roles (Ghorbani)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Direct -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Direct">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#RelationType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Effort -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Effort">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Reasoning"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Emission -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Emission">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#ProductBasedOffering"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#EmotionalNeed -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#EmotionalNeed">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#JobsToBeDone"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#EndNode -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#EndNode">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#PhysicalComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#EntityAction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#EntityAction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#OperationalStructure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#EntryCondition -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#EntryCondition">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Condition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#EvaluativeStructure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#EvaluativeStructure">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#MAIA"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Firm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Firm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#AgentType"/>
+        <rdfs:comment>Private Company</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Function -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Function">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Brand"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Personalization"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Trust"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Other"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#FunctionalNeed -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#FunctionalNeed">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#ActionBody"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#JobsToBeDone"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Gain -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Gain">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Property"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Government -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Government">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#AgentType"/>
+        <rdfs:comment>Governmental Organization</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#HumanResource -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#HumanResource">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#AgentType"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Resource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Indirect -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Indirect">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#RelationType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Information -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Information">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Other"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#InfrastructureManagement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#InfrastructureManagement">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#BMC"/>
+        <rdfs:comment>How a company creates value</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Institution -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Institution">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#ConstitutionalStructure"/>
+        <rdfs:comment>Institutions are structured according to Ostrom&apos;s ADICO grammar of institutions</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#InstitutionalResponsibility -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#InstitutionalResponsibility">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#ActionBody"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#IntangibleResource -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#IntangibleResource">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#PhysicalComponent"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Resource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#IntrinsicCapability -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#IntrinsicCapability">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#ActionBody"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#JobsToBeDone -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#JobsToBeDone">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Other"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Loop -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Loop">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Plan"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#MAIA -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#MAIA">
+        <rdfs:comment>&quot;Modeling Agents using Institutional Analysis (MAIA) is developed by A. Ghorbani, in order to make ABM more accessible for non-programmers. It offers a good structure for abm&apos;s&quot;</rdfs:comment>
+        <rdfs:comment>A Socio Technical System (STS) is organised in five structures.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Mechanism -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Mechanism">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Relationship"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#MeetingCondition -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#MeetingCondition">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Condition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#None -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#None">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#RelationType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Norm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Norm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Institution"/>
+        <rdfs:comment>&quot;institutional statement without an &apos;or else&apos; component&quot; (Ghorbani, 2013) - ADIC</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Objective -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Objective">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Other"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Obligation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Obligation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Deontic"/>
+        <rdfs:comment>O. &quot;Must&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Offering -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Offering">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#ProductBasedOffering"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#ServiceBasedOffering"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#ValueProposition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#OperationalStructure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#OperationalStructure">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#MAIA"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Optimization -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Optimization">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Reasoning"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#OrElse -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#OrElse">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Other"/>
+        <rdfs:comment>ie. Saction, consequence of non-compliance</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Other -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Other"/>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Pain -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Pain">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Property"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#ParentComposition -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#ParentComposition">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#PhysicalComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Partner -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Partner">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#InfrastructureManagement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#PassiveService -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#PassiveService">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#ServiceBasedOffering"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#People -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#People">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#AgentType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Permission -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Permission">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Deontic"/>
+        <rdfs:comment>P. &quot;Can&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#PersonalValue -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#PersonalValue">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Variable"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Personalization -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Personalization">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Function"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#PhysicalAsset -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#PhysicalAsset">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#TangibleResource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#PhysicalComponent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#PhysicalComponent">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#PhysicalStructure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#PhysicalComposition -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#PhysicalComposition">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#PhysicalStructure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#PhysicalConnection -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#PhysicalConnection">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#PhysicalStructure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#PhysicalStructure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#PhysicalStructure">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#MAIA"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Plan -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Plan">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Atomic"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Choice"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Loop"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Sequence"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#OperationalStructure"/>
+        <rdfs:comment>Sequence of Actions {Loop, Choice, Sequence, Atomic}</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Position -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Position">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Property"/>
+        <rdfs:comment>Location</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#PostCondition -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#PostCondition">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Condition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#PreCondition -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#PreCondition">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Condition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#PrimaryActivity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#PrimaryActivity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#ActivityLevel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Private -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Private">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Type"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#ProblemDomainVariable -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#ProblemDomainVariable">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#EvaluativeStructure"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Variable"/>
+        <rdfs:comment>Dependent Variables</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Product -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Product">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#ProductBasedOffering"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#ProductBasedOffering -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#ProductBasedOffering">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Offering"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Prohibition -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Prohibition">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Deontic"/>
+        <rdfs:comment>F. &quot;May not&quot; - forbidden</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Property -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Property">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Other"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#PropositionalFormula -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#PropositionalFormula">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Other"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Public -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Public">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Type"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Reasoning -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Reasoning">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Other"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#RelationType -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#RelationType">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Direct"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Indirect"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#None"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Other"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Relationship -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Relationship">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#CustomerInterface"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Resource -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Resource">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#InfrastructureManagement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#ResourceAcquisition -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#ResourceAcquisition">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Reasoning"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Retention -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Retention">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#CustomerEquity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Risk -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Risk">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Reasoning"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Role -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Role">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#ConstitutionalStructure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#RoleEnactment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#RoleEnactment">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#OperationalStructure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Rule -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Rule">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Institution"/>
+        <rdfs:comment>ADICO</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#ScarceResource -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#ScarceResource">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#TangibleResource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Sequence -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Sequence">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Plan"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#ServiceBasedOffering -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#ServiceBasedOffering">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#ActiveService"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#PassiveService"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Offering"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#SharedStrategy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#SharedStrategy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Institution"/>
+        <rdfs:comment>institutional statement without sanction nor deontic type (Ghorbani, 2013). AIC</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#SocialNeed -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#SocialNeed">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#JobsToBeDone"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#SupportActivity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#SupportActivity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#ActivityLevel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#TangibleResource -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#TangibleResource">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Resource"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#PhysicalComponent"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#PhysicalComposition"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#PhysicalConnection"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#TargetCustomer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#TargetCustomer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#AgentType"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#CustomerInterface"/>
+        <rdfs:comment>a (set of) agents who comply with certain Attribute or Role</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Trust -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Trust">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Function"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Type -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Type">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Private"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Public"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Other"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Ubiquity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Ubiquity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#TangibleResource"/>
+        <rdfs:comment>Resources found anywhere</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Use -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Use">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Reasoning"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Utility -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Utility">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#TangibleResource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#ValidationVariable -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#ValidationVariable">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#EvaluativeStructure"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Variable"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#ValueProposition -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#ValueProposition">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#BMC"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#ValueUpdate -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#ValueUpdate">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#PropositionalFormula"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Variable -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Variable">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Other"/>
+        <rdfs:comment>Lexicon for variables</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Waste -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Waste">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#ProductBasedOffering"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#TangibleResource"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Aim"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Attribute"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Condition"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#OrElse"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Norm"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Rule"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#SharedStrategy"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#PhysicalAsset"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#ScarceResource"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Ubiquity"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Utility"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/jesse/ontologies/2018/10/GenericOntology#Waste"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+
